@@ -18,7 +18,7 @@ paint types you should make.
 If it is possible to satisfy all your customers, there will be only one answer which minimizes the
 number of matte batches.
 
-####Input
+###Input
 
 One line containing an integer C, the number of test cases in the input file.
 For each test case, there will be:
@@ -33,14 +33,16 @@ Each customer will have at least one color that they like (T >= 1).
 Each customer will like at most one matte color. (At most one pair for each customer has Y = 1).
 All of these numbers are separated by single spaces.
 
-####Output
+###Output
+
 C lines, one for each test case in the order they occur in the input file, each containing the string
 "Case #X: " where X is the number of the test case, starting from 1, followed by:
 The string "IMPOSSIBLE", if the customers' preferences cannot be satisfied; OR
 N space-separated integers, one for each color from 1 to N, which are 0 if the corresponding paint
 should be prepared glossy, and 1 if it should be matte.
 
-####Limits
+###Limits
+
 Small dataset
 C = 100
 1 <= N <= 10
@@ -52,7 +54,7 @@ C = 5
 
 The sum of all the T values for the customers in a test case will not exceed 3000.
 
-####Sample
+###Sample
 
 Input
 2
@@ -78,23 +80,23 @@ glossy. You cannot satisfy them both.
 
 ## Solution
 
-#### Run test spec
+### Run test spec
 cd PaintShop
 sbt
 test
 exit
 
-#### Create a fat Jar
+### Create a fat Jar
 sbt
 assembly
 exit
 
-#### Run the PaintShop standalone application
-###### on Windows (installed JDK 1.8):
+### Run the PaintShop standalone application
+#### on Windows (installed JDK 1.8):
 cd target\scala-2.11
 
-###### on Linux/CentOS (installed JDK 1.8):
+#### on Linux/CentOS (installed JDK 1.8):
 cd target/scala-2.11
 
-###### Run the jar for file0.txt:
+#### Run the jar for file0.txt:
 java -jar PaintShop-assembly-1.0.jar ../../src/test/resources/file0.txt
